@@ -147,11 +147,15 @@ const Todolist = () => {
     <div className='list-todo'>
       {tasks.map((task, index) => (
         <div className='todoin' key={task.id}>
-          Name: {task.Name}
-          <br />
-          Description: {task.Description}
-          <br />
-          Status <BasicButtonExample />
+          <div>
+            <span>Name: {task.Name}</span>
+            <br />
+            <span>Description: {task.Description}</span>
+          </div>
+          <div style={{ display: 'flex',justifyContent:"center", alignItems: 'center' }}>
+            <span>Status: </span>
+            <BasicButtonExample />
+          </div>
           <div className='butin'>
             <button className='editb'>Edit</button>
             <button className='deleteb' onClick={() => removeTodo(index)}>
